@@ -1,6 +1,8 @@
 <template class="w-full container">
-
+  <div>
     <router-view  /> <!-- your routes will load inside of these tags -->    
+
+  </div>
 
 </template>
 

@@ -1,21 +1,11 @@
 <template>
-    <div class="flex flex-col">
+    <div class="flex flex-col py-40">
+        <h1 class="text-center text-4xl text-slate-200 drop-shadow-4xl font-bold ">Welcome to The Vue Task App</h1>
         <SingIn v-if="isSignIn"/>
         <SingUp v-else/>
 
-        <button v-if="isSignIn" @click="isSignIn=false" class="">
-            Click to Sign Up
-        </button>
-
-        <button v-else @click="isSignIn=true">
-            Click to Sign In
-        </button>
-
-
+        
     </div>
-
-
-
 
 </template>
 
