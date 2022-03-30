@@ -1,6 +1,6 @@
 <template>
-    <div  class="flex items-center flex-col my-20 pb-28 h-full ">
-        <div class="flex items-center flex-col bg-slate-900 w-2/5 bg-opacity-60 px-6 my-3 rounded-md shadow">
+    <form @submit.prevent="handleLogin" class="flex items-center flex-col my-20 pb-28 h-full">
+        <div class="flex items-center flex-col  bg-slate-900 bg-opacity-60 px-6 my-3 md:w-2/5 w-5/5 rounded-md shadow">
 
             <h3 class="mt-3 text-2xl text-white"> Sign In </h3>
             <label for="email" class="w-full mt-3 mb-2 text-white text-lg">Email</label>
@@ -17,7 +17,7 @@
                 Click to Sign Up
             </button>
         </div>
-    </div>
+    </form>
 </template>
 
 <script setup>

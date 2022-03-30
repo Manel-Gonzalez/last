@@ -1,3 +1,4 @@
+const plugin = require ('tailwindcss/plugin')
 module.exports = {
   content: [
     "./index.html",
@@ -12,7 +13,7 @@ module.exports = {
       },
       dropShadow:{
         '4xl': [
-          '1px 2px 2px rgba(0, 0, 0, 1)'
+          '-2px 1px 1px rgba(0, 0, 0, 0.8)'
       ]
       },
       borderColor:["focus"]
@@ -24,5 +25,22 @@ module.exports = {
 
     }
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          /* IE and Edge */
+          '-ms-overflow-style': 'none',
+
+          /* Firefox */
+          'scrollbar-width': 'none',
+
+          /* Safari and Chrome */
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          }
+        }
+      })
+    })
+  ],
 }

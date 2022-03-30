@@ -1,12 +1,12 @@
 <template>
   <div>
-    <span class="">{{ user.email }}</span>
+
     <input
       type="text"
       name="newTask"
       id="newTask"
       placeholder="New Task"
-      class="rounded mx-5 bg-slate-300"
+      class="rounded mx-3 px-3 bg-slate-300"
       v-model="newTodo"
 
     />
@@ -20,8 +20,6 @@
 
 <script setup>
 import { storeToRefs } from "pinia";
-import { useUserStore } from "../stores/user";
-import { useTaskStore } from "../stores/task";
 import { ref, reactive } from "vue";
 import router from "../router";
 import AppHeader from "../components/AppHeader.vue";
@@ -34,10 +32,7 @@ let newTodo = ref("")//empty for fill with new Task
 let emptyNew = ref(false)// flag for show error or not
 let errorInput = ref("")// empty for custom errors
 
-const userStore = useUserStore();
-const userPinia = storeToRefs(userStore);
 
-const user = ref(userPinia.user);
 
 // function adds task
 function addTodo(){

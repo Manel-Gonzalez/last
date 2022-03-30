@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ item.title }}</p>
+    <p class="">{{ item.title }}</p>
     <button @click="deleteTask" class="bg-red-500 rounded px-2">Delete</button>
     <button @click="showEdit" class="bg-blue-500 rounded px-2 mx-2">Edit</button>
     <button @click="completeTask" class="bg-green-500 rounded px-2">Complete</button>
