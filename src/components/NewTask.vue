@@ -1,19 +1,17 @@
 <template>
-  <div>
+  <div class="flex flex-row flex-wrap lg:px-10">
 
     <input
       type="text"
       name="newTask"
       id="newTask"
       placeholder="New Task"
-      class="rounded mx-3 px-3 bg-slate-300"
+      class="h-8 w-8/12 pl-2 my-6 ml-2 bg-slate-300 rounded-md  border-transparent border-4 border-solid  focus:border-teal-600 outline-none"
       v-model="newTodo"
 
     />
-    <p v-if="emptyNew" class="text-red-400" >{{errorInput}}</p>
-    <button type="submit" class="bg-blue-500 rounded px-2 my-2" @click.prevent="addTodo">
-      Add Task
-    </button>
+    <button type="submit" class="h-8 ml-2 lg:ml-10 my-6 w-3/12 bg-blue-500 rounded" @click.prevent="addTodo">Add Task</button>
+    <p v-if="emptyNew" class="text-red-400 ml-8 text-lg " >{{errorInput}}</p>
     <hr />
   </div>
 </template>

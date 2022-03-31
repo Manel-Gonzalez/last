@@ -1,29 +1,27 @@
 <template>
     <AppHeader/>
-    <section class="px-12">
-        <h1 class="text-center text-4xl text-slate-50 drop-shadow-4xl font-bold my-12">Card Task</h1>
-        <div class="w-full bg-slate-900 bg-opacity-80  mb-16">
+    <section class="md:px-12">
+        <h1 class="text-center text-6xl text-slate-50 drop-shadow-4xl font-bold my-10">Card Task</h1>
+        <div class="w-full bg-slate-900 bg-opacity-80 min-h-fit rounded-md shadow pb-10">
             <NewTask @childAddTodo="addTodo"/>
-            <div class="flex flex-row justify-between w-full ">
-                <div class=" px-3 py-3 mx-3 my-3 w-1/2 h-full">
-                    <h2 class="text-white text-xl">To Do</h2>
-                    <section class="flex flex-row flex-wrap ">
+            <div class=" justify-between w-full flex flex-col md:flex-row">
+                <div class="w-auto md:w-1/2 h-full mx-3">
+                    <h2 class="text-white text-4xl text-center mt-4">To Do</h2>
+                    <section class="flex flex-row flex-wrap">
                         <TaskItem
                         v-for="task in notCompletedTasks" :key="task.id" :item="task"
-                        class="bg-gray-100 rounded m-2 p-2 w-fit"
-                        @childDelete="removeTask" 
+                        class="bg-amber-200 "
+                        @childDelete="removeTask"
                         @childEdit="editTask" 
-                        @childComplete="completeTask" 
-                        />
-                    
+                        @childComplete="completeTask"/>
                  </section>  
                 </div>
-                <div class=" px-3 py-3 mx-3 my-3 w-1/2 h-full">
-                    <h2 class="text-white text-xl">Completed</h2>
-                    <section class="flex flex-row flex-wrap ">
+                <div class="w-auto md:w-1/2 h-full mx-3">
+                    <h2 class="text-white text-4xl text-center mt-4">Completed</h2>
+                    <section class="flex flex-row flex-wrap">
                         <TaskItem
                         v-for="task in completedTasks" :key="task.id" :item="task"
-                         class="bg-gray-100 rounded m-2 p-2 w-fit"
+                        class="last:mb-20 md:last:mb-2 bg-emerald-400"
                         @childDelete="removeTask" 
                         @childEdit="editTask" 
                         @childComplete="completeTask"/>

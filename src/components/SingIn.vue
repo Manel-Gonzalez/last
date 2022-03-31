@@ -1,6 +1,6 @@
 <template>
-    <form @submit.prevent="handleLogin" class="flex items-center flex-col my-20 pb-28 h-full">
-        <div class="flex items-center flex-col  bg-slate-900 bg-opacity-60 px-6 my-3 md:w-2/5 w-5/5 rounded-md shadow">
+    <form @submit.prevent="handleLogin" class="flex items-center flex-col my-10 h-full">
+        <div class="flex items-center flex-col  bg-slate-900 bg-opacity-60 px-6 my-3 md:w-2/5 w-full rounded-md shadow">
 
             <h3 class="mt-3 text-2xl text-white"> Sign In </h3>
             <label for="email" class="w-full mt-3 mb-2 text-white text-lg">Email</label>
@@ -9,11 +9,11 @@
             <label for="password" class="w-full mt-3 mb-2 text-white text-lg">Password</label>
             <input type="password" id="password" class="bg-slate-300 w-full rounded-md  border-transparent border-4 border-solid pl-2 focus:border-teal-600 outline-none" placeholder="Password" v-model="passwordData">
             
-            <button @click="handleLogIn"  class="mt-6 bg-slate-900 hover:bg-slate-700  rounded-md w-1/2 h-10 text-white">
+            <button @click="handleLogIn"  class="mt-6 bg-slate-900 hover:bg-slate-700  rounded-md w-1/2 h-10  transition-colors duration-50 hover:animate-pulse ease-out text-white">
                 Log In
             </button>
 
-            <button @click="isSignIn=false"  class="my-3 bg-slate-900 hover:bg-slate-700 rounded-md w-1/2 h-10 text-white ">
+            <button @click="isSignIn=false"  class="my-3 bg-slate-900 hover:bg-slate-700 rounded-md w-1/2 h-10  transition-colors duration-50 hover:animate-pulse ease-out text-white">
                 Click to Sign Up
             </button>
         </div>

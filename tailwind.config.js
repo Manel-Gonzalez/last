@@ -8,8 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        'login-img': "url('./src/assets/bg-HR.jpg')"
-    
+        'login-img': "url('./src/assets/bg-HR.png')"
       },
       dropShadow:{
         '4xl': [

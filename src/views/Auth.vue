@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col py-60 ">
+    <div class="flex flex-col my-20">
         <h1 class="text-center text-4xl text-slate-50 drop-shadow-4xl font-bold ">Welcome to The Vue Task App</h1>
         <SingIn v-if="isSignIn"/>
         <SingUp v-else/>
